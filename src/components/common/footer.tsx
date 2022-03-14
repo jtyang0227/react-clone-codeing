@@ -5,25 +5,35 @@ const FooterStyle = styled.footer`
   height: 100px;
   background-color: rgb(49, 53, 62);
   color: #D5D5D5FF;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 
-  address {
-    width: 1130px;
-    padding: 0 30px 92px;
-    margin: 0 auto;
-  }
-  
   h3 {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: red;
   }
-  
+
+  h3::after {
+
+  }
+
+  h3::before {
+  }
+`;
+const FooterInner = styled.div`
+  width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  ul {
+    display: table-cell;
+  }
+
+  ul li {
+  }
 `;
 const Footer = () => {
   return (
     <FooterStyle>
-      <address>
+      <FooterInner>
         <div>
           <h3>Timf</h3>
           <ul>
@@ -51,10 +61,8 @@ const Footer = () => {
             <li>위치기반 서비스 이용약관</li>
           </ul>
         </div>
-      </address>
+      </FooterInner>
     </FooterStyle>
-
-
   );
 };
 

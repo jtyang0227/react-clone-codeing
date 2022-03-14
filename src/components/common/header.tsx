@@ -2,43 +2,67 @@ import styled from 'styled-components';
 
 const HeaderStyle = styled.header`
   position: relative;
-  background-color: #fff;
- 
-  .inner {
-    width: 1130px;
-    padding: 0 30px 92px;
-    margin: 0 auto;
-  }
-  
+  background-color: aliceblue;
+`;
+
+const HeaderInner = styled.div`
+  position: relative;
+  width: 1100px;
+  height: 60px;
+  margin: 0 auto;
+`;
+
+const LogoArea = styled.div`
+  position: absolute;
+  height: 100%;
+  background-color: #eee;
+
   h1 {
-    background-image: url("../styles/image/teamfresh_logo.png");
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
   }
 `;
 
 const NavStyle = styled.nav`
   height: 60px;
-  position: fixed;
-  z-index: 10;
-  padding: 0.8rem !important;
+  line-height: 60px;
+  z-index: 100;
+
+  ul {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  ul li {
+    float: left;
+  }
+
+  ul li + li {
+    padding-left: 20px;
+  }
 `;
 
 const Header = () => {
   return (
     <HeaderStyle>
-      <div className="inner">
-        <h1>
-          LOGO
-        </h1>
+      <HeaderInner>
+        <LogoArea>
+          <h1>
+            logo
+          </h1>
+        </LogoArea>
         <NavStyle>
           <ul>
-            <li>회사소개</li>
-            <li>사업소개</li>
-            <li>공지사항</li>
-            <li>보도자료</li>
-            <li>배송지역검색</li>
+            <li><a href='#'>회사소개</a></li>
+            <li><a href='#'>사업소개</a></li>
+            <li><a href='#'>공지사항</a></li>
+            <li><a href='#'>보도자료</a></li>
+            <li><a href='#'>배송지역검색</a></li>
           </ul>
         </NavStyle>
-      </div>
+      </HeaderInner>
     </HeaderStyle>
   );
 };

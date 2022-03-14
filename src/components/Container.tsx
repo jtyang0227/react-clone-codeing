@@ -3,20 +3,22 @@ import styled from 'styled-components';
 const ContainerStyle = styled.div`
   position: relative;
   width: 100%;
-  height: 100px;
-  background-color: aquamarine;
-`
+  height: 700px;
+  background-color: #eee;
+`;
+
+const ContainerInner = styled.div`
+
+`;
 
 const Container = () => {
   return (
-    <div>
-      <ContainerStyle>
-        <section>
+    <ContainerStyle>
+      <section>
 
-        </section>
-      </ContainerStyle>
-    </div>
-  )
-}
+      </section>
+    </ContainerStyle>
+  );
+};
 
 export default Container;
